@@ -9,10 +9,10 @@ password = 'SUA SENHA' # (IN BASE64)
 #CONFIG
 url = 'https://suap.ifsp.edu.br/accounts/login/'
 boletim = 'https://suap.ifsp.edu.br/edu/aluno/'+login+'/?tab=boletim'
+print('Buscando...')
 req = requests.session()
 csrf = req.get(url).cookies['csrftoken']
 #LOGIN
-print('Buscando...')
 req.post(url, data = {'username': login , 'password': base64.b64decode(password), 'csrfmiddlewaretoken': csrf})
 #GET BOLETIM TABLE
 resBoletim = req.get(boletim).text
