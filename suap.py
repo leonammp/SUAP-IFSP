@@ -20,7 +20,7 @@ soup = BeautifulSoup(resBoletim,'lxml')
 table = soup.find('table', attrs={'class':'borda'})
 if table == None:
 	print('Erro. Verifique usuário e senha.')
-	print(quit())
+	quit()
 table_body = table.find('tbody')
 rows = table_body.find_all('tr')
 #CREATE OUTPUT TABLE
