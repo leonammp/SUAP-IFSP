@@ -18,6 +18,9 @@ req.post(url, data = {'username': login , 'password': base64.b64decode(password)
 resBoletim = req.get(boletim).text
 soup = BeautifulSoup(resBoletim,'lxml')
 table = soup.find('table', attrs={'class':'borda'})
+if table == None:
+	print('Erro. Verifique usuário e senha.')
+	print(quit())
 table_body = table.find('tbody')
 rows = table_body.find_all('tr')
 #CREATE OUTPUT TABLE
