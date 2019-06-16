@@ -1,4 +1,4 @@
-# SUAP-IFSP
+# SUAP Scraping
 
 Altere as variáveis "login" e "password" no arquivo suap.py para seu usuário e senha do sistema SUAP.
 
